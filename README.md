@@ -1,90 +1,275 @@
-# DocuVault – Secure Cloud-Based Document Sharing Platform
+# 📄 DocuVault
 
-DocuVault is a professional-grade, full-stack web application designed for secure document management and sharing. It features role-based access control, industry-standard security, and a modern, responsive user interface.
+<p align="center">
 
-## 🚀 Features
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
 
-- **Authentication & Authorization**: Secure JWT-based authentication with bcrypt password hashing.
-- **Role-Based Access Control (RBAC)**: Distinct dashboards for Users and Admins.
-- **Document Management**: Upload, download, delete, and rename files.
-- **Secure Sharing**: Share documents with specific users.
-- **Activity Tracking**: Detailed logs for all major actions (uploads, downloads, logins, etc.).
-- **Modern UI**: Built with React and Tailwind CSS, featuring a responsive sidebar, dashboard cards, and toast notifications.
-- **Admin Panel**: Manage all users, view system-wide stats, and monitor activity logs.
+</p>
 
-## 🛠 Tech Stack
+<h3 align="center">
+🔐 Secure Document Management & Sharing Platform
+</h3>
 
-- **Frontend**: React.js, Vite, Redux Toolkit, Tailwind CSS, Axios, Lucide React.
-- **Backend**: Python Flask, JWT-Extended, Bcrypt, PyMongo.
-- **Database**: MongoDB.
-- **Storage**: Local filesystem (Modular design for easy S3/Cloudinary integration).
+---
 
-## 📋 Prerequisites
+# 📖 Overview
 
-- Node.js (v16+)
-- Python (v3.8+)
-- MongoDB (Running locally or a cloud instance)
+**DocuVault** is a secure full-stack document management system that enables users to upload, store, organize, and securely share digital documents.
 
-## 🔧 Installation & Setup
+The application uses **JWT Authentication**, **Role-Based Access Control (RBAC)**, and **MongoDB** to ensure secure access to documents while providing administrators with user and activity management capabilities.
 
-### 1. Clone the repository
-```bash
-git clone <repository-url>
-cd Docvault
-```
+---
 
-### 2. Backend Setup
-```bash
-cd server
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-Create a `.env` file in the `server` directory (see `.env.example`).
-Initialize the admin user:
-```bash
-python init_db.py
-```
-Run the server:
-```bash
-python run.py
-```
+# ✨ Features
 
-### 3. Frontend Setup
-```bash
-cd ../client
-npm install
-npm run dev
-```
+- 🔐 Secure User Authentication
+- 🔑 JWT Token-Based Login
+- 🔒 Password Encryption using bcrypt
+- 👤 User Registration & Login
+- 📂 Secure Document Upload
+- 📥 Download Documents
+- 🤝 Document Sharing
+- 📊 Activity Logs
+- 👨‍💼 Admin Dashboard
+- 👥 Role-Based Access Control
+- 🔍 User Management
+- 📱 Responsive User Interface
 
-## 🔐 Security Features
+---
 
-- **JWT Authentication**: Secure stateless authentication.
-- **Bcrypt Hashing**: One-way password hashing for user privacy.
-- **Middleware**: Protected routes and role verification on both frontend and backend.
-- **File Validation**: Secure filename handling and type validation.
+# 🛠️ Tech Stack
 
-## 📁 Project Structure
+## Frontend
 
-```
-Docvault/
-├── client/              # React frontend
-│   ├── src/
-│   │   ├── components/  # Reusable UI components
-│   │   ├── pages/       # Page views
-│   │   ├── store/       # Redux state management
-│   │   └── utils/       # API and helper functions
-├── server/              # Flask backend
-│   ├── app/
-│   │   ├── models/      # MongoDB data logic
-│   │   ├── routes/      # API endpoints
-│   │   ├── utils/       # Helpers & Logger
-│   │   └── middleware/  # Auth & Role checks
-│   ├── uploads/         # Local file storage
-│   └── run.py           # Entry point
+- React.js
+- Vite
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript
+
+## Backend
+
+- Python
+- Flask
+- Flask-CORS
+- JWT Authentication
+- bcrypt
+
+## Database
+
+- MongoDB
+
+## Development Tools
+
+- Git
+- GitHub
+- VS Code
+- Postman
+
+---
+
+# 📂 Project Structure
+
+```text
+DocuVault
+│
+├── client
+│   ├── src
+│   ├── public
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server
+│   ├── app
+│   │   ├── models
+│   │   ├── routes
+│   │   ├── utils
+│   │   └── db.py
+│   │
+│   ├── requirements.txt
+│   ├── config.py
+│   └── run.py
+│
+├── .gitignore
 └── README.md
 ```
 
-## 📝 License
+---
 
-This project is licensed under the MIT License.
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Nayana-nk-reddy/Docuvault.git
+```
+
+## Frontend Setup
+
+```bash
+cd client
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd server
+
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python run.py
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the **server** folder.
+
+```env
+SECRET_KEY=your_secret_key
+
+JWT_SECRET_KEY=your_jwt_secret
+
+MONGO_URI=mongodb://localhost:27017/docvault
+
+FLASK_ENV=development
+```
+
+---
+
+# 🔒 Security Features
+
+- JWT Authentication
+- Password Hashing using bcrypt
+- Role-Based Authorization
+- Secure REST APIs
+- Protected Routes
+- Activity Logging
+
+---
+
+# 🚀 Future Enhancements
+
+- Email Verification
+- Password Reset
+- Cloud Storage Integration
+- Dark Mode
+- Two-Factor Authentication
+- File Versioning
+- Search & Filters
+- Email Notifications
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+(Add Screenshot)
+
+---
+
+## Login Page
+
+(Add Screenshot)
+
+---
+
+## Dashboard
+
+(Add Screenshot)
+
+---
+
+## Admin Dashboard
+
+(Add Screenshot)
+
+---
+
+## Upload Documents
+
+(Add Screenshot)
+
+---
+
+## Activity Logs
+
+(Add Screenshot)
+
+---
+
+# 📊 Workflow
+
+```text
+User
+   │
+   ▼
+React Frontend
+   │
+REST API
+   │
+Flask Backend
+   │
+JWT Authentication
+   │
+MongoDB Database
+```
+
+---
+
+# 🎯 Project Highlights
+
+✅ Secure Authentication
+
+✅ Role-Based Access Control
+
+✅ Document Upload & Sharing
+
+✅ Activity Monitoring
+
+✅ Full Stack Architecture
+
+✅ RESTful API Development
+
+---
+
+# 👩‍💻 Author
+
+## Nayana N K
+
+🎓 Computer Science Graduate
+
+💻 Full Stack Developer
+
+🌱 Currently Learning
+
+- Data Structures & Algorithms
+- System Design
+- Cloud Computing
+
+
+
+<p align="center">
+
+Made with ❤️ by <b>Nayana N K</b>
+
+</p>
