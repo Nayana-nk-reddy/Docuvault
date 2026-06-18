@@ -21,7 +21,7 @@
 
 **DocuVault** is a secure full-stack document management system that enables users to upload, store, organize, and securely share digital documents.
 
-The application uses **JWT Authentication**, **Role-Based Access Control (RBAC)**, and **MongoDB** to ensure secure access to documents while providing administrators with user and activity management capabilities.
+The application uses **JWT Authentication**, **Role-Based Access Control (RBAC)**, and **MongoDB** to provide secure document access while allowing administrators to manage users and monitor system activity.
 
 ---
 
@@ -34,9 +34,9 @@ The application uses **JWT Authentication**, **Role-Based Access Control (RBAC)*
 - 📂 Secure Document Upload
 - 📥 Download Documents
 - 🤝 Document Sharing
-- 📊 Activity Logs
 - 👨‍💼 Admin Dashboard
 - 👥 Role-Based Access Control
+- 📊 Activity Logs
 - 🔍 User Management
 - 📱 Responsive User Interface
 
@@ -81,7 +81,6 @@ DocuVault
 │
 ├── client
 │   ├── src
-│   ├── public
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -104,23 +103,19 @@ DocuVault
 
 # ⚙️ Installation
 
-## Clone Repository
+## Clone the Repository
 
 ```bash
-git clone https://github.com/Nayana-nk-reddy/Docuvault.git
+git clone https://github.com/Nayana-nk-reddy/Docvault.git
 ```
 
 ## Frontend Setup
 
 ```bash
 cd client
-
 npm install
-
 npm run dev
 ```
-
----
 
 ## Backend Setup
 
@@ -141,15 +136,12 @@ python run.py
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the **server** folder.
+Create a `.env` file inside the **server** directory.
 
 ```env
 SECRET_KEY=your_secret_key
-
 JWT_SECRET_KEY=your_jwt_secret
-
 MONGO_URI=mongodb://localhost:27017/docvault
-
 FLASK_ENV=development
 ```
 
@@ -159,10 +151,31 @@ FLASK_ENV=development
 
 - JWT Authentication
 - Password Hashing using bcrypt
-- Role-Based Authorization
-- Secure REST APIs
-- Protected Routes
+- Role-Based Access Control
+- Protected API Endpoints
+- Secure File Management
 - Activity Logging
+
+---
+
+# 📊 Project Workflow
+
+```text
+           User
+             │
+             ▼
+     React Frontend
+             │
+        REST API Calls
+             │
+             ▼
+      Flask Backend
+             │
+ JWT Authentication
+             │
+             ▼
+     MongoDB Database
+```
 
 ---
 
@@ -171,84 +184,23 @@ FLASK_ENV=development
 - Email Verification
 - Password Reset
 - Cloud Storage Integration
-- Dark Mode
-- Two-Factor Authentication
+- Two-Factor Authentication (2FA)
 - File Versioning
-- Search & Filters
+- Search & Filter
 - Email Notifications
-
----
-
-# 📸 Screenshots
-
-## Home Page
-
-(Add Screenshot)
-
----
-
-## Login Page
-
-(Add Screenshot)
-
----
-
-## Dashboard
-
-(Add Screenshot)
-
----
-
-## Admin Dashboard
-
-(Add Screenshot)
-
----
-
-## Upload Documents
-
-(Add Screenshot)
-
----
-
-## Activity Logs
-
-(Add Screenshot)
-
----
-
-# 📊 Workflow
-
-```text
-User
-   │
-   ▼
-React Frontend
-   │
-REST API
-   │
-Flask Backend
-   │
-JWT Authentication
-   │
-MongoDB Database
-```
+- Dark Mode
 
 ---
 
 # 🎯 Project Highlights
 
-✅ Secure Authentication
-
-✅ Role-Based Access Control
-
-✅ Document Upload & Sharing
-
-✅ Activity Monitoring
-
-✅ Full Stack Architecture
-
-✅ RESTful API Development
+- ✅ Full Stack Web Application
+- ✅ JWT Authentication
+- ✅ Role-Based Access Control
+- ✅ Secure Document Upload & Sharing
+- ✅ Activity Logging
+- ✅ RESTful API Development
+- ✅ Responsive User Interface
 
 ---
 
@@ -258,18 +210,11 @@ MongoDB Database
 
 🎓 Computer Science Graduate
 
+💼 Aspiring Software Engineer
+
 💻 Full Stack Developer
-
-🌱 Currently Learning
-
-- Data Structures & Algorithms
-- System Design
-- Cloud Computing
-
 
 
 <p align="center">
-
 Made with ❤️ by <b>Nayana N K</b>
-
 </p>
