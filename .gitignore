@@ -1,0 +1,17 @@
+# React
+client/node_modules/
+client/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment
+server/.env
+.env
+
+# User uploads
+server/uploads/
+
+# VS Code
+.vscode/
